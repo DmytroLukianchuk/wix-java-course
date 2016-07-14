@@ -11,6 +11,7 @@ import java.util.stream.IntStream;
  Second row - all the numbers which are multiples of 3
  Third row - all the numbers which are multiples of 4
  */
+
 public class Misparim {
 
     public List<Integer> generateList(int userNumber) {
@@ -31,11 +32,7 @@ public class Misparim {
         Misparim misparim = new Misparim();
         List<Integer> list = misparim.generateList(20);
         System.out.println(misparim.filterByMultiple(2, list));
-        System.out.println();
         System.out.println(misparim.filterByMultiple(3, list));
-        System.out.println();
         System.out.println(misparim.filterByMultiple(4, list));
-        System.out.println();
-
     }
 }
