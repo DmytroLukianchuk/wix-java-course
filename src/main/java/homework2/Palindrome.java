@@ -25,8 +25,6 @@ public class Palindrome {
 
     public boolean isArrayPalindrome()  {
         for (int i = 0; i < (this.arrayList.size() - 1) / 2; i++) {
-            if (this.arrayList.size() % 2 == 0)
-                return false;
             if (!Objects.equals(this.arrayList.get(i), this.arrayList.get(this.arrayList.size() - 1 - i))) {
                 return false;
             }
@@ -45,7 +43,7 @@ public class Palindrome {
     }
 
     public static void main(String[] args) {
-        ArrayList<Integer> inputData = fillArrayByInt(12321);
+        ArrayList<Integer> inputData = fillArrayByInt(123321);
 
         Palindrome palindrome = new Palindrome(inputData);
 

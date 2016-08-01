@@ -20,8 +20,6 @@ public class PalindromeStr {
 
     public boolean isStringPalindrome() {
         for (int i = 0; i < this.userData.length(); i++) {
-            if (this.userData.length() % 2 == 0)
-                return false;
             if (!userData.substring(i, i + 1).equals(userData.substring(userData.length() - i - 1, userData.length() - i)))
                 return false;
         }
@@ -29,7 +27,7 @@ public class PalindromeStr {
     }
 
     public static void main(String[] args) {
-        PalindromeStr palindromeStr = new PalindromeStr("abcdedcba");
+        PalindromeStr palindromeStr = new PalindromeStr("abddba");
         System.out.print(palindromeStr);
         System.out.println(palindromeStr.isStringPalindrome());
     }
