@@ -16,7 +16,7 @@ package homework2;
  */
 public class TestPerson {
     public static void main(String[] args) {
-        Address address = new Address("Shevchenko st.", 35, 49000);
+        Address address = new Address("Shevchenko", 35, 49000);
         Person person1 = new Person("Dima", address, 11, 27);
         Person person2 = new Person("Dima", address, 11, 27);
         Person person3 = new Person("Vova", null, 11, 27);
