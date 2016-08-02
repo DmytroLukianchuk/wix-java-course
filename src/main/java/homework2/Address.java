@@ -22,24 +22,38 @@ public class Address {
     private int zipCode;
 
     public Address(String street, int houseNumber, int zipCode) {
-        this.street = street;
-        this.houseNumber = houseNumber;
-        this.zipCode = zipCode;
+        if (street == null)
+            this.street = "Unknown";
+        else
+            this.street = street;
+        if (zipCode < 0)
+            this.zipCode = 0;
+        else
+            this.zipCode = zipCode;
+        if (houseNumber < 0)
+            this.houseNumber = 0;
+        else
+            this.houseNumber = houseNumber;
     }
 
     public void setStreet(String street) {
-        if (street.isEmpty()) this.street = "Unknown";
+        if (street == null)
+            this.street = "Unknown";
         else this.street = street;
     }
 
     public void setHouseNumber(int houseNumber) {
-        if (houseNumber > 0) this.houseNumber = houseNumber;
-        else this.houseNumber = 0;
+        if (houseNumber < 0)
+            this.houseNumber = 0;
+        else
+            this.houseNumber = houseNumber;
     }
 
     public void setZipCode(int zipCode) {
-        if (zipCode > 0) this.zipCode = zipCode;
-        else this.zipCode = 0;
+        if (zipCode < 0)
+            this.zipCode = 0;
+        else
+            this.zipCode = zipCode;
     }
 
     public String getStreet() {

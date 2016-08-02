@@ -20,8 +20,10 @@ public class Person {
     private int age;
 
     public void setAddress(Address address) {
-        if (address.equals("")) this.address = new Address("Anonymous", 0, 0);
-        else this.address = address;
+        if (address == null)
+            this.address = new Address("Anonymous", 0, 0);
+        else
+            this.address = address;
     }
 
     public void setAge(int age) {
@@ -46,10 +48,22 @@ public class Person {
     }
 
     public Person(String name, Address address, int id, int age) {
-        this.name = name;
-        this.address = address;
-        this.id = id;
-        this.age = age;
+        if (name == null)
+            this.name = "Anonymous";
+        else
+            this.name = name;
+        if (address == null)
+            this.address = new Address("Anonymous", 0, 0);
+        else
+            this.address = address;
+        if (id < 0)
+            this.id = 0;
+        else
+            this.id = id;
+        if (age < 0)
+            this.age = 0;
+        else
+            this.age = age;
     }
 
     @Override
