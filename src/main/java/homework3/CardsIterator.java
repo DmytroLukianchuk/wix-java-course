@@ -28,4 +28,8 @@ public class CardsIterator implements Iterator {
     public boolean hasNext() {
         return counter < this.cardsPack.size() - 1;
     }
+
+    public void reset() {
+        counter = 0;
+    }
 }
