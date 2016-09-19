@@ -1,4 +1,4 @@
-package errorhandling;
+package homework4;
 
 /**
  * Error Handling

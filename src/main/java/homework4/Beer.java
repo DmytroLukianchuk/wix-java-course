@@ -1,4 +1,4 @@
-package enumpractice;
+package homework4;
 /**
  * Enum
  * Create a BEER enum which represents types of beer and holds the following info per each beer: type, alcohol content as described in below table
