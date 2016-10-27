@@ -26,7 +26,16 @@ public class NegativeBalance {
     private static double setInitialUserBalance() {
         Scanner scInitialUserBalance = new Scanner(System.in);
 
-        return scInitialUserBalance.nextDouble();
+        double userInput;
+        while (true) {
+            try {
+                userInput = Double.parseDouble(scInitialUserBalance.next());
+                break;
+            } catch (NumberFormatException e) {
+                System.out.println("You entered not a number. Pls try again");
+            }
+        }
+        return userInput;
     }
 
     private void withdraw() throws NegativeBalanceException {
